@@ -1,5 +1,5 @@
 {
-  "name": "log",
+  "name": "@pythia22/log",
   "version": "1.0.0",
   "description": "Logging extensions",
   "main": "index.js",
@@ -12,7 +12,12 @@
     "dayjs": "^1.11.2",
     "dotenv": "^16.0.1"
   },
+  "type": "module",
   "publishConfig": {
     "registry":"https://npm.pkg.github.com/"
-}
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pythia22/log.git"
+  }
 }

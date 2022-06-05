@@ -1,28 +1,28 @@
-import dotenv from 'dotenv'
+var dotenv = require('dotenv');
 dotenv.config();
-import dayjs from 'dayjs';
+var dayjs =  require('dayjs');
 
-export const LevelEnum = Object.freeze({"DEBUG":"DEBUG", "INFO":"INFO", "ERROR":"ERROR"})
+exports.LevelEnum = Object.freeze({"DEBUG":"DEBUG", "INFO":"INFO", "ERROR":"ERROR"})
 
 /**
  * 
  * @param {LevelEnum} level 
  * @param {string} message 
  */
-export function log() {
+const log = function () {
     const level = arguments[0];
     const message = Array.prototype.slice.call(arguments, 1);
     // eslint-disable-next-line no-undef
     console.log(`[${dayjs().format(process.env.DATE_FORMAT_CONSOLE)}][${level}]`, message);
 }
-
+exports.log = log
 /**
  * 
  * @param {LevelEnum} level 
  * @param {string} url 
  * @param {string} method 
  */
-export function logRequest(level, url, method) {
+exports.logRequest = function(level, url, method) {
     const message = {
         url: url,
         method: method,
@@ -30,7 +30,7 @@ export function logRequest(level, url, method) {
     log(level, `[REQUEST]`, message)
 }
 
-export function logResponse(level, url, method, statusCode, data) {
+exports.logResponse = function(level, url, method, statusCode, data) {
     const message = {
         url: url,
         method: method,
@@ -40,7 +40,7 @@ export function logResponse(level, url, method, statusCode, data) {
     log(level, `[RESPONSE]`, message)
 }
 
-export function logDB(level, query, values) {
+exports.logDB = function(level, query, values) {
     const message = {
         query: query,
         values: values,
