@@ -29,6 +29,14 @@ export const logRequest = function(level, url, method) {
     log(level, `[REQUEST]`, message)
 }
 
+/**
+ * 
+ * @param {LevelEnum} level 
+ * @param {string} url 
+ * @param {string} method 
+ * @param {string} statusCode
+ * @param {object} data
+ */
 export const logResponse = function(level, url, method, statusCode, data) {
     const message = {
         url: url,
@@ -39,6 +47,12 @@ export const logResponse = function(level, url, method, statusCode, data) {
     log(level, `[RESPONSE]`, message)
 }
 
+/**
+ * 
+ * @param {LevelEnum} level 
+ * @param {string} query
+ * @param {Array<string>} values
+ */
 export const logDB = function(level, query, values) {
     const message = {
         query: query,
