@@ -1,6 +1,6 @@
 {
   "name": "@pythia22/log",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Logging extensions",
   "main": "index.js",
   "scripts": {
@@ -9,12 +9,11 @@
   "author": "Dimitris Garofalakis",
   "license": "MIT",
   "dependencies": {
-    "dayjs": "^1.11.2",
-    "dotenv": "^16.0.1"
+    "dayjs": "^1.11.2"
   },
   "type": "module",
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/"
   },
   "repository": {
     "type": "git",
